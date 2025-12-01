@@ -1,9 +1,20 @@
 import { GoogleGenAI } from "@google/genai";
 
 const getClient = () => {
-  const apiKey = process.env.API_KEY;
+  let apiKey = '';
+  try {
+    // Attempt to access process.env safely
+    // In many bundlers (Vite/Webpack), process.env.API_KEY is replaced at build time.
+    // However, checking 'process' existence first prevents ReferenceError in strict browser environments.
+    if (typeof process !== 'undefined' && process.env) {
+      apiKey = process.env.API_KEY || '';
+    }
+  } catch (error) {
+    console.warn("Could not access process.env");
+  }
+
   if (!apiKey) {
-    console.error("API Key is missing!");
+    console.error("API Key is missing! AI features will be disabled.");
     return null;
   }
   return new GoogleGenAI({ apiKey });
@@ -11,7 +22,7 @@ const getClient = () => {
 
 export const getMathHelp = async (problemQuestion: string, currentContext: string) => {
   const client = getClient();
-  if (!client) return "ขออภัย ระบบ AI ยังไม่พร้อมใช้งานในขณะนี้ (Missing API Key)";
+  if (!client) return "ระบบ AI ไม่พร้อมใช้งาน (ไม่พบ API Key) กรุณาลองใหม่อีกครั้ง";
 
   try {
     const prompt = `

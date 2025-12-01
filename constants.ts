@@ -96,13 +96,6 @@ const PROBLEM_DATABASE: Record<string, Problem[]> = {
   ],
 
   'm1-HARD': [
-    createProblem('m1-h1', 'ถ้า x+2, 3x+1, 4x-5 เป็นลำดับเลขคณิต จงหาค่าของ x', [
-      { id: 'c1', text: '3', isCorrect: false },
-      { id: 'c2', text: '4', isCorrect: true },
-      { id: 'c3', text: '5', isCorrect: false },
-      { id: 'c4', text: '6', isCorrect: false }
-    ], 'ผลต่างร่วมต้องเท่ากัน: พจน์2 - พจน์1 = พจน์3 - พจน์2', ['(3x+1) - (x+2) = (4x-5) - (3x+1)', '2x - 1 = x - 6', 'x = -5 (เดี๋ยวนะ โจทย์อาจจะพิมพ์ผิดในต้นฉบับ หรือคำนวณใหม่)', 'ลองใหม่: (3x+1) - (x+2) = 2x-1', '(4x-5) - (3x+1) = x-6', '2x-1 = x-6 => x = -5', 'ถ้าโจทย์คือ x+2, 3x+1, 4x-5 จะได้ x=-5', 'แต่ถ้าช้อยส์ไม่มี -5 ลองเช็ค: x=4 -> 6, 13, 11 (ไม่ใช่)', 'ขอปรับโจทย์ให้ลงตัวตามช้อยส์: ถ้าเป็น x+2, 2x+2, 3x+2 (d=x) ง่ายไป', 'เอาใหม่ตามคณิตศาสตร์ที่ถูก: 2(กลาง) = หน้า+หลัง', '2(3x+1) = (x+2) + (4x-5)', '6x+2 = 5x-3 => x = -5', 'โอเค คำตอบคือ -5 (แต่ในตัวเลือกไม่มี งั้นแสดงว่าโจทย์ตัวอย่างอาจจะตัวเลขไม่ลงตัว ขอเปลี่ยนโจทย์ให้ลงตัวกับ x=4)', 'โจทย์ใหม่: ถ้า 2, x, 10 เป็นเลขคณิต x=?', 'เอาโจทย์ยากจริงๆ: ผลบวก 3 พจน์แรกคือ 15 ผลคูณคือ 80', 'กลับมาที่โจทย์ (x+2), (3x+2), (5x+2) -> 2(3x+2) = 6x+4, x+2+5x+2 = 6x+4. อันนี้เป็นเสมอ', 'เอาข้อใหม่: ถ้า k, 2k-1, 4k-6 เป็นเลขคณิต จงหา k'], Difficulty.HARD),
-    // Re-writing m1-h1 to be mathematically sound with integer answer
     createProblem('m1-h1-fix', 'กำหนดให้ k, 2k+2, 4k+1 เป็นลำดับเลขคณิต จงหาค่าของ k', [
       { id: 'c1', text: '2', isCorrect: false },
       { id: 'c2', text: '3', isCorrect: true },
@@ -127,7 +120,7 @@ const PROBLEM_DATABASE: Record<string, Problem[]> = {
       { id: 'c3', text: '210', isCorrect: true },
       { id: 'c4', text: '220', isCorrect: false }
     ], 'เป็นผลบวกเลขคณิต 1 ถึง 20', ['1 + 2 + 3 + ... + 20', 'S<sub>n</sub> = n(n+1)/2', 'S<sub>20</sub> = 20(21)/2 = 210'], Difficulty.HARD),
-    createProblem('m1-h5', 'ถ้าผลบวก n พจน์แรกคือ S<sub>n</sub> = 3n<sup>2</sup> + 2n จงหาพจน์ที่ 10 (a<sub>10</sub>)', [
+    createProblem('m1-h5', 'ถ้าผลบวก n พจน์แรกของ S<sub>n</sub> = 3n<sup>2</sup> + 2n จงหาพจน์ที่ 10 (a<sub>10</sub>)', [
       { id: 'c1', text: '57', isCorrect: false },
       { id: 'c2', text: '59', isCorrect: true },
       { id: 'c3', text: '62', isCorrect: false },
@@ -197,7 +190,7 @@ const PROBLEM_DATABASE: Record<string, Problem[]> = {
       { id: 'c3', text: '48', isCorrect: false },
       { id: 'c4', text: '51', isCorrect: false }
     ], 'บวกเลขตรงๆ หรือใช้สูตร', ['3 + 6 + 12 + 24', '9 + 12 = 21', '21 + 24 = 45'], Difficulty.MEDIUM),
-    createProblem('m2-m5', 'จงหาค่า k ที่ทำให้ 2, k, 18 เป็นลำดับเรขาคณิต และ 2, k, 10 เป็นลำดับเลขคณิต (โจทย์หลอก - เอาใหม่: จงหา k ที่ทำให้ k-1, k+3, 2k เป็นเรขาคณิต)', [
+    createProblem('m2-m5', 'จงหาค่า k ที่ทำให้ k-1, k+3, 2k เป็นลำดับเรขาคณิต', [
       { id: 'c1', text: '8', isCorrect: false },
       { id: 'c2', text: '9', isCorrect: true },
       { id: 'c3', text: '10', isCorrect: false },
@@ -471,7 +464,7 @@ export const MISSIONS_DATA: Mission[] = [
     title: 'ภารกิจที่ 3: ผลรวมอนันต์ (Series & Sigma)',
     description: 'เจาะลึกสัญลักษณ์ Sigma และลิมิตของลำดับอนันต์',
     icon: '∑',
-    image: 'https://images.unsplash.com/photo-1635241161466-541f065683ba?q=80&w=600&auto=format&fit=crop',
+    image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=600&auto=format&fit=crop',
     status: MissionStatus.AVAILABLE,
     subMissions: [
       { id: 'm3-s1', title: 'ด่านฝึกฝน: Sigma & Limit', description: 'โจทย์ 5 ข้อ หาผลรวมและลิมิต', problems: [] }
