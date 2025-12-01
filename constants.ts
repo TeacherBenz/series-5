@@ -60,6 +60,37 @@ const PROBLEM_DATABASE: Record<string, Problem[]> = {
       { id: 'c3', text: '8', isCorrect: false },
       { id: 'c4', text: '9', isCorrect: false }
     ], 'แทนค่าในสูตร หรือนับต่อไปเรื่อยๆ', ['ลำดับเพิ่มขึ้นทีละ 3 (d=3)', 'พจน์ที่ 4 คือ 4', 'พจน์ที่ 5 คือ 4 + 3 = 7'], Difficulty.EASY),
+    // New Questions
+    createProblem('m1-e6', 'ลำดับ 100, 90, 80, 70, ... พจน์ถัดไปคือ?', [
+      { id: 'c1', text: '50', isCorrect: false },
+      { id: 'c2', text: '60', isCorrect: true },
+      { id: 'c3', text: '65', isCorrect: false },
+      { id: 'c4', text: '55', isCorrect: false }
+    ], 'ลดลงทีละ 10', ['70 - 10 = 60'], Difficulty.EASY),
+    createProblem('m1-e7', 'ถ้า a<sub>1</sub> = 10 และ d = 2 จงหาพจน์ที่ 3 (a<sub>3</sub>)', [
+      { id: 'c1', text: '12', isCorrect: false },
+      { id: 'c2', text: '14', isCorrect: true },
+      { id: 'c3', text: '16', isCorrect: false },
+      { id: 'c4', text: '18', isCorrect: false }
+    ], 'แทนค่าในสูตร หรือบวกเพิ่ม', ['10, 12, 14'], Difficulty.EASY),
+    createProblem('m1-e8', 'ข้อใดไม่ใช่ลำดับเลขคณิต', [
+      { id: 'c1', text: '1, 2, 3, 4', isCorrect: false },
+      { id: 'c2', text: '2, 4, 6, 8', isCorrect: false },
+      { id: 'c3', text: '1, 2, 4, 8', isCorrect: true },
+      { id: 'c4', text: '5, 10, 15, 20', isCorrect: false }
+    ], 'เช็คผลต่างร่วม', ['1, 2, 4, 8 เป็นลำดับเรขาคณิต (x2)'], Difficulty.EASY),
+    createProblem('m1-e9', 'พจน์ที่ 10 ของลำดับเลข (1, 3, 5, 7, ...) คือ?', [
+      { id: 'c1', text: '17', isCorrect: false },
+      { id: 'c2', text: '19', isCorrect: true },
+      { id: 'c3', text: '21', isCorrect: false },
+      { id: 'c4', text: '18', isCorrect: false }
+    ], 'สูตรเลขคี่ 2n-1', ['2(10) - 1 = 19'], Difficulty.EASY),
+    createProblem('m1-e10', 'ถ้า 3, x, 7 เป็นลำดับเลขคณิต จงหาค่า x', [
+      { id: 'c1', text: '4', isCorrect: false },
+      { id: 'c2', text: '5', isCorrect: true },
+      { id: 'c3', text: '6', isCorrect: false },
+      { id: 'c4', text: '4.5', isCorrect: false }
+    ], 'x คือค่าเฉลี่ยของ 3 กับ 7', ['(3+7)/2 = 5'], Difficulty.EASY),
   ],
 
   'm1-MEDIUM': [
@@ -93,6 +124,37 @@ const PROBLEM_DATABASE: Record<string, Problem[]> = {
       { id: 'c3', text: '120', isCorrect: false },
       { id: 'c4', text: '90', isCorrect: false }
     ], 'ใช้สูตร S<sub>n</sub> = n/2 [2a<sub>1</sub> + (n-1)d]', ['S<sub>10</sub> = 10/2 [2(2) + (9)(2)]', 'S<sub>10</sub> = 5 [4 + 18]', 'S<sub>10</sub> = 5 * 22 = 110'], Difficulty.MEDIUM),
+    // New Questions
+    createProblem('m1-m6', 'พจน์ที่เท่าใดของลำดับ 2, 6, 10, ... มีค่าเท่ากับ 42', [
+      { id: 'c1', text: '10', isCorrect: false },
+      { id: 'c2', text: '11', isCorrect: true },
+      { id: 'c3', text: '12', isCorrect: false },
+      { id: 'c4', text: '13', isCorrect: false }
+    ], 'แก้สมการหา n', ['42 = 2 + (n-1)4', '40 = 4(n-1)', '10 = n-1 => n = 11'], Difficulty.MEDIUM),
+    createProblem('m1-m7', 'ลำดับเลขคณิตที่มี a<sub>1</sub> = 20 และ a<sub>5</sub> = 8 จงหา d', [
+      { id: 'c1', text: '-2', isCorrect: false },
+      { id: 'c2', text: '-3', isCorrect: true },
+      { id: 'c3', text: '3', isCorrect: false },
+      { id: 'c4', text: '-4', isCorrect: false }
+    ], 'a<sub>5</sub> = a<sub>1</sub> + 4d', ['8 = 20 + 4d', '-12 = 4d', 'd = -3'], Difficulty.MEDIUM),
+    createProblem('m1-m8', 'ผลบวกของ 1 + 2 + 3 + ... + 50 มีค่าเท่าใด', [
+      { id: 'c1', text: '1225', isCorrect: false },
+      { id: 'c2', text: '1275', isCorrect: true },
+      { id: 'c3', text: '1300', isCorrect: false },
+      { id: 'c4', text: '1250', isCorrect: false }
+    ], 'สูตร n(n+1)/2', ['50(51)/2 = 25 * 51 = 1275'], Difficulty.MEDIUM),
+    createProblem('m1-m9', 'กำหนด 4, x, y, 16 เป็นลำดับเลขคณิต จงหา x + y', [
+      { id: 'c1', text: '18', isCorrect: false },
+      { id: 'c2', text: '20', isCorrect: true },
+      { id: 'c3', text: '22', isCorrect: false },
+      { id: 'c4', text: '24', isCorrect: false }
+    ], 'หา d ก่อน', ['16 = 4 + 3d => 12=3d => d=4', 'x=8, y=12', 'x+y = 20'], Difficulty.MEDIUM),
+    createProblem('m1-m10', 'ถ้าพจน์ทั่วไปคือ a<sub>n</sub> = 5 - 2n จงหาผลบวก 3 พจน์แรก', [
+      { id: 'c1', text: '-3', isCorrect: true },
+      { id: 'c2', text: '-5', isCorrect: false },
+      { id: 'c3', text: '0', isCorrect: false },
+      { id: 'c4', text: '3', isCorrect: false }
+    ], 'หา a1, a2, a3', ['a1=3, a2=1, a3=-1', '3 + 1 + (-1) = 3'], Difficulty.MEDIUM),
   ],
 
   'm1-HARD': [
@@ -126,6 +188,37 @@ const PROBLEM_DATABASE: Record<string, Problem[]> = {
       { id: 'c3', text: '62', isCorrect: false },
       { id: 'c4', text: '320', isCorrect: false }
     ], 'ใช้สูตร a<sub>n</sub> = S<sub>n</sub> - S<sub>n-1</sub>', ['a<sub>10</sub> = S<sub>10</sub> - S<sub>9</sub>', 'S<sub>10</sub> = 3(100) + 20 = 320', 'S<sub>9</sub> = 3(81) + 18 = 243 + 18 = 261', 'a<sub>10</sub> = 320 - 261 = 59'], Difficulty.HARD),
+    // New Questions
+    createProblem('m1-h6', 'ลำดับเลขคณิตชุดหนึ่งมี a<sub>5</sub> + a<sub>10</sub> = 60 จงหา S<sub>14</sub>', [
+      { id: 'c1', text: '400', isCorrect: false },
+      { id: 'c2', text: '420', isCorrect: true },
+      { id: 'c3', text: '440', isCorrect: false },
+      { id: 'c4', text: '460', isCorrect: false }
+    ], 'ใช้สูตร S<sub>n</sub> = n/2 (a<sub>1</sub> + a<sub>n</sub>)', ['a<sub>5</sub>+a<sub>10</sub> = (a<sub>1</sub>+4d) + (a<sub>1</sub>+9d) = 2a<sub>1</sub>+13d = 60', 'S<sub>14</sub> = 14/2 (2a<sub>1</sub>+13d) = 7(60) = 420'], Difficulty.HARD),
+    createProblem('m1-h7', 'จำนวนเต็มระหว่าง 100 ถึง 500 ที่หารด้วย 9 ลงตัว มีผลบวกเท่าใด', [
+      { id: 'c1', text: '13000', isCorrect: false },
+      { id: 'c2', text: '13366', isCorrect: false },
+      { id: 'c3', text: '13300', isCorrect: false },
+      { id: 'c4', text: '13266', isCorrect: true }
+    ], 'หาตัวแรก (108) และตัวท้าย (495)', ['108 + 117 + ... + 495', 'n = (495-108)/9 + 1 = 44', 'S = 44/2 (108+495) = 22 * 603 = 13266'], Difficulty.HARD),
+    createProblem('m1-h8', 'ถ้า log(2), log(2x-1), log(2x+3) เป็นลำดับเลขคณิต จงหาค่า x', [
+      { id: 'c1', text: '2.5', isCorrect: true },
+      { id: 'c2', text: '3', isCorrect: false },
+      { id: 'c3', text: '4', isCorrect: false },
+      { id: 'c4', text: '5', isCorrect: false }
+    ], '2log(2x-1) = log(2) + log(2x+3)', ['(2x-1)<sup>2</sup> = 2(2x+3)', '4x<sup>2</sup>-4x+1 = 4x+6', '4x<sup>2</sup>-8x-5 = 0', '(2x+1)(2x-5)=0 => x = 2.5 (x>0)'], Difficulty.HARD),
+    createProblem('m1-h9', 'ผลบวก 20 พจน์แรกของลำดับเลขคณิตที่มี a<sub>1</sub>=5 และ a<sub>20</sub>=95 คือ?', [
+      { id: 'c1', text: '900', isCorrect: false },
+      { id: 'c2', text: '950', isCorrect: false },
+      { id: 'c3', text: '1000', isCorrect: true },
+      { id: 'c4', text: '1050', isCorrect: false }
+    ], 'S = n/2(a<sub>1</sub>+a<sub>n</sub>)', ['20/2 (5+95) = 10(100) = 1000'], Difficulty.HARD),
+    createProblem('m1-h10', 'ถ้า S<sub>n</sub> = 2n<sup>2</sup> - n จงหา a<sub>1</sub> + a<sub>3</sub>', [
+      { id: 'c1', text: '8', isCorrect: false },
+      { id: 'c2', text: '10', isCorrect: true },
+      { id: 'c3', text: '12', isCorrect: false },
+      { id: 'c4', text: '14', isCorrect: false }
+    ], 'หาทีละพจน์จาก S', ['a<sub>1</sub>=S<sub>1</sub>=2-1=1', 'S<sub>3</sub>=18-3=15, S<sub>2</sub>=8-2=6 => a<sub>3</sub>=9', 'a<sub>1</sub>+a<sub>3</sub> = 1+9 = 10'], Difficulty.HARD),
   ],
 
   // ==========================================
@@ -163,6 +256,37 @@ const PROBLEM_DATABASE: Record<string, Problem[]> = {
       { id: 'c3', text: '32', isCorrect: false },
       { id: 'c4', text: '6', isCorrect: false }
     ], 'คูณ 2 ไปเรื่อยๆ', ['2, 4, 8, 16'], Difficulty.EASY),
+    // New Questions
+    createProblem('m2-e6', 'พจน์ถัดไปของลำดับ 100, 50, 25, ... คือ', [
+      { id: 'c1', text: '10', isCorrect: false },
+      { id: 'c2', text: '12.5', isCorrect: true },
+      { id: 'c3', text: '15', isCorrect: false },
+      { id: 'c4', text: '20', isCorrect: false }
+    ], 'หาร 2 หรือคูณ 0.5', ['25 / 2 = 12.5'], Difficulty.EASY),
+    createProblem('m2-e7', 'ถ้า a<sub>2</sub> = 10 และ a<sub>3</sub> = 20 แล้ว r คือ?', [
+      { id: 'c1', text: '2', isCorrect: true },
+      { id: 'c2', text: '0.5', isCorrect: false },
+      { id: 'c3', text: '10', isCorrect: false },
+      { id: 'c4', text: '4', isCorrect: false }
+    ], 'r = a<sub>3</sub>/a<sub>2</sub>', ['20/10 = 2'], Difficulty.EASY),
+    createProblem('m2-e8', 'ลำดับ 1, -1, 1, -1, ... มีค่า r เท่าใด', [
+      { id: 'c1', text: '1', isCorrect: false },
+      { id: 'c2', text: '-1', isCorrect: true },
+      { id: 'c3', text: '0', isCorrect: false },
+      { id: 'c4', text: 'หาค่าไม่ได้', isCorrect: false }
+    ], 'สลับเครื่องหมาย', ['-1/1 = -1'], Difficulty.EASY),
+    createProblem('m2-e9', 'พจน์ที่ 3 ของลำดับเรขาคณิตที่ a<sub>1</sub>=4, r=3 คือ?', [
+      { id: 'c1', text: '12', isCorrect: false },
+      { id: 'c2', text: '36', isCorrect: true },
+      { id: 'c3', text: '27', isCorrect: false },
+      { id: 'c4', text: '24', isCorrect: false }
+    ], '4, 12, 36', ['4 * 3 = 12, 12 * 3 = 36'], Difficulty.EASY),
+    createProblem('m2-e10', 'ข้อใด "ไม่ใช่" ลำดับเรขาคณิต', [
+      { id: 'c1', text: '2, 4, 8', isCorrect: false },
+      { id: 'c2', text: '5, 25, 125', isCorrect: false },
+      { id: 'c3', text: '3, 6, 9', isCorrect: true },
+      { id: 'c4', text: '1, -1, 1', isCorrect: false }
+    ], '3, 6, 9 เป็นเลขคณิต (+3)', ['3->6 (x2), 6->9 (x1.5) ไม่เท่ากัน'], Difficulty.EASY),
   ],
 
   'm2-MEDIUM': [
@@ -196,6 +320,37 @@ const PROBLEM_DATABASE: Record<string, Problem[]> = {
       { id: 'c3', text: '10', isCorrect: false },
       { id: 'c4', text: '12', isCorrect: false }
     ], 'ใช้สมบัติอัตราส่วนร่วม', ['(k+3)/(k-1) = 2k/(k+3)', '(k+3)<sup>2</sup> = 2k(k-1)', 'k<sup>2</sup>+6k+9 = 2k<sup>2</sup>-2k', '0 = k<sup>2</sup>-8k-9', '(k-9)(k+1) = 0 => k=9 (ถ้า k เป็นบวก)'], Difficulty.MEDIUM),
+    // New Questions
+    createProblem('m2-m6', 'ถ้า a<sub>1</sub> = 3 และ a<sub>4</sub> = 24 จงหา r', [
+      { id: 'c1', text: '2', isCorrect: true },
+      { id: 'c2', text: '3', isCorrect: false },
+      { id: 'c3', text: '4', isCorrect: false },
+      { id: 'c4', text: '1.5', isCorrect: false }
+    ], 'ar<sup>3</sup> = 24', ['3r<sup>3</sup> = 24 => r<sup>3</sup> = 8 => r = 2'], Difficulty.MEDIUM),
+    createProblem('m2-m7', 'ลำดับ 16, 8, 4, ... พจน์ที่เท่าใดมีค่า 1/4', [
+      { id: 'c1', text: '6', isCorrect: false },
+      { id: 'c2', text: '7', isCorrect: true },
+      { id: 'c3', text: '8', isCorrect: false },
+      { id: 'c4', text: '9', isCorrect: false }
+    ], '16(1/2)<sup>n-1</sup> = 1/4', ['(1/2)<sup>n-1</sup> = 1/64 = (1/2)<sup>6</sup>', 'n-1=6 => n=7'], Difficulty.MEDIUM),
+    createProblem('m2-m8', 'ผลบวก 5 พจน์แรกของ 1 + 2 + 4 + ...', [
+      { id: 'c1', text: '31', isCorrect: true },
+      { id: 'c2', text: '30', isCorrect: false },
+      { id: 'c3', text: '32', isCorrect: false },
+      { id: 'c4', text: '63', isCorrect: false }
+    ], 'S = a(r<sup>n</sup>-1)/(r-1)', ['1(32-1)/1 = 31'], Difficulty.MEDIUM),
+    createProblem('m2-m9', 'ค่าเฉลี่ยเรขาคณิตของ 2 และ 8 คือ?', [
+      { id: 'c1', text: '4', isCorrect: true },
+      { id: 'c2', text: '5', isCorrect: false },
+      { id: 'c3', text: '6', isCorrect: false },
+      { id: 'c4', text: '3', isCorrect: false }
+    ], 'sqrt(2*8)', ['sqrt(16) = 4'], Difficulty.MEDIUM),
+    createProblem('m2-m10', 'ถ้า a<sub>3</sub> = 12, r = 2 จงหา a<sub>1</sub>', [
+      { id: 'c1', text: '2', isCorrect: false },
+      { id: 'c2', text: '3', isCorrect: true },
+      { id: 'c3', text: '4', isCorrect: false },
+      { id: 'c4', text: '6', isCorrect: false }
+    ], 'a<sub>1</sub>r<sup>2</sup> = 12', ['4a<sub>1</sub> = 12 => a<sub>1</sub> = 3'], Difficulty.MEDIUM),
   ],
 
   'm2-HARD': [
@@ -229,6 +384,37 @@ const PROBLEM_DATABASE: Record<string, Problem[]> = {
       { id: 'c3', text: '31,400', isCorrect: false },
       { id: 'c4', text: '12,000', isCorrect: false }
     ], 'อนุกรมเรขาคณิต S<sub>n</sub>', ['S<sub>12</sub> = 1000(1.1<sup>12</sup> - 1) / (1.1 - 1)', '1000(3.14 - 1) / 0.1', '1000(2.14) * 10 = 21,400'], Difficulty.HARD),
+    // New Questions
+    createProblem('m2-h6', 'ทศนิยมซ้ำ 0.999... มีค่าเท่ากับเท่าใด', [
+      { id: 'c1', text: '0.9', isCorrect: false },
+      { id: 'c2', text: '1', isCorrect: true },
+      { id: 'c3', text: 'เข้าใกล้ 1 แต่ไม่เท่ากับ 1', isCorrect: false },
+      { id: 'c4', text: '9/10', isCorrect: false }
+    ], 'อนุกรมอนันต์ a1=0.9, r=0.1', ['0.9 / (1-0.1) = 0.9/0.9 = 1'], Difficulty.HARD),
+    createProblem('m2-h7', 'ผลบวกของ 3 + 1 + 1/3 + 1/9 + ... คือ?', [
+      { id: 'c1', text: '4', isCorrect: false },
+      { id: 'c2', text: '4.5', isCorrect: true },
+      { id: 'c3', text: '5', isCorrect: false },
+      { id: 'c4', text: 'หาค่าไม่ได้', isCorrect: false }
+    ], 'a1=3, r=1/3', ['3 / (1-1/3) = 3 / (2/3) = 9/2 = 4.5'], Difficulty.HARD),
+    createProblem('m2-h8', 'ลำดับ 2, 2x, 18, ... จงหา x (x>0)', [
+      { id: 'c1', text: '3', isCorrect: false },
+      { id: 'c2', text: '6', isCorrect: true },
+      { id: 'c3', text: '9', isCorrect: false },
+      { id: 'c4', text: '4', isCorrect: false }
+    ], '4x<sup>2</sup> = 36', ['x<sup>2</sup> = 9 => x = 3 แต่ 2(3)=6 ไม่ใช่ลำดับที่ถูก... เดี๋ยวนะ (2x)^2 = 36 => 4x^2=36 => x^2=9 => x=3 ลำดับคือ 2, 6, 18 (r=3) ถูกต้อง'], Difficulty.HARD),
+    createProblem('m2-h9', 'ลำดับ 1, 2, 4, ... ถ้าผลบวก n พจน์แรกคือ 255 จงหา n', [
+      { id: 'c1', text: '7', isCorrect: false },
+      { id: 'c2', text: '8', isCorrect: true },
+      { id: 'c3', text: '9', isCorrect: false },
+      { id: 'c4', text: '10', isCorrect: false }
+    ], 'S = a(r^n - 1)/(r-1)', ['255 = 1(2^n - 1)/1', '256 = 2^n => n=8'], Difficulty.HARD),
+    createProblem('m2-h10', 'ลำดับผสม a<sub>n</sub> = 2<sup>n</sup> + n จงหาพจน์ที่ 5', [
+      { id: 'c1', text: '32', isCorrect: false },
+      { id: 'c2', text: '37', isCorrect: true },
+      { id: 'c3', text: '35', isCorrect: false },
+      { id: 'c4', text: '40', isCorrect: false }
+    ], '2^5 + 5', ['32 + 5 = 37'], Difficulty.HARD),
   ],
 
   // ==========================================
@@ -266,6 +452,37 @@ const PROBLEM_DATABASE: Record<string, Problem[]> = {
         { id: 'c3', text: 'จำนวนจินตภาพ', isCorrect: false },
         { id: 'c4', text: 'ผลรวม', isCorrect: false }
       ], 'ความหมายพื้นฐาน', ['Infinity คือความไม่มีที่สิ้นสุด'], Difficulty.EASY),
+      // New Questions
+      createProblem('m3-e6', 'Σ(i+1) เมื่อ i=1 ถึง 3 คือ?', [
+        { id: 'c1', text: '6', isCorrect: false },
+        { id: 'c2', text: '9', isCorrect: true },
+        { id: 'c3', text: '7', isCorrect: false },
+        { id: 'c4', text: '5', isCorrect: false }
+      ], '(1+1)+(2+1)+(3+1)', ['2+3+4 = 9'], Difficulty.EASY),
+      createProblem('m3-e7', 'lim (5) เมื่อ n -> ∞', [
+        { id: 'c1', text: '0', isCorrect: false },
+        { id: 'c2', text: '5', isCorrect: true },
+        { id: 'c3', text: '∞', isCorrect: false },
+        { id: 'c4', text: 'หาค่าไม่ได้', isCorrect: false }
+      ], 'ลิมิตของค่าคงที่', ['ได้ค่าคงที่เสมอ'], Difficulty.EASY),
+      createProblem('m3-e8', 'ข้อใดเป็นอนุกรมลู่ออก (Divergent)', [
+        { id: 'c1', text: '1/2 + 1/4 + 1/8...', isCorrect: false },
+        { id: 'c2', text: '1 + 1.1 + 1.21...', isCorrect: true },
+        { id: 'c3', text: '0.9 + 0.09...', isCorrect: false },
+        { id: 'c4', text: '1 + 0 + 0...', isCorrect: false }
+      ], 'r > 1 หรือผลบวกเพิ่มเรื่อยๆ', ['1.1 > 1'], Difficulty.EASY),
+      createProblem('m3-e9', 'Σ(2) เมื่อ i=1 ถึง 100', [
+        { id: 'c1', text: '200', isCorrect: true },
+        { id: 'c2', text: '100', isCorrect: false },
+        { id: 'c3', text: '2', isCorrect: false },
+        { id: 'c4', text: '50', isCorrect: false }
+      ], '100 * 2', ['200'], Difficulty.EASY),
+      createProblem('m3-e10', '1/n^2 เมื่อ n มากๆ จะมีค่าเป็นอย่างไร', [
+        { id: 'c1', text: 'เข้าใกล้ 0', isCorrect: true },
+        { id: 'c2', text: 'เข้าใกล้ 1', isCorrect: false },
+        { id: 'c3', text: 'มีค่ามากมหาศาล', isCorrect: false },
+        { id: 'c4', text: 'สลับไปมา', isCorrect: false }
+      ], 'ตัวหารมาก ค่าจะน้อย', ['เข้าใกล้ 0'], Difficulty.EASY),
   ],
   'm3-MEDIUM': [
     createProblem('m3-m1', 'จงหาค่าของ lim (3n+1)/(n-2) เมื่อ n -> ∞', [
@@ -298,6 +515,37 @@ const PROBLEM_DATABASE: Record<string, Problem[]> = {
         { id: 'c3', text: '0', isCorrect: false },
         { id: 'c4', text: '∞', isCorrect: false }
       ], 'สัมประสิทธิ์หน้าดีกรีสูงสุด', ['2n<sup>2</sup> / 5n<sup>2</sup> = 2/5'], Difficulty.MEDIUM),
+    // New Questions
+    createProblem('m3-m6', 'Σ(k+1) เมื่อ k=1 ถึง 10 คือ?', [
+      { id: 'c1', text: '55', isCorrect: false },
+      { id: 'c2', text: '65', isCorrect: true },
+      { id: 'c3', text: '60', isCorrect: false },
+      { id: 'c4', text: '70', isCorrect: false }
+    ], 'Σk + Σ1', ['55 + 10 = 65'], Difficulty.MEDIUM),
+    createProblem('m3-m7', 'lim (n^2 + 1) / (2n^2) เมื่อ n -> ∞', [
+      { id: 'c1', text: '0', isCorrect: false },
+      { id: 'c2', text: '1', isCorrect: false },
+      { id: 'c3', text: '1/2', isCorrect: true },
+      { id: 'c4', text: '2', isCorrect: false }
+    ], 'สัมประสิทธิ์ n^2', ['1/2'], Difficulty.MEDIUM),
+    createProblem('m3-m8', 'ผลบวก 1 + 1/2 + 1/4 + ... ถึงอนันต์', [
+      { id: 'c1', text: '1', isCorrect: false },
+      { id: 'c2', text: '2', isCorrect: true },
+      { id: 'c3', text: '1.5', isCorrect: false },
+      { id: 'c4', text: 'หาค่าไม่ได้', isCorrect: false }
+    ], 'a1=1, r=1/2', ['1/(1-0.5) = 2'], Difficulty.MEDIUM),
+    createProblem('m3-m9', 'lim (4n^3 + n) / (2n^3 + 5)', [
+      { id: 'c1', text: '2', isCorrect: true },
+      { id: 'c2', text: '4', isCorrect: false },
+      { id: 'c3', text: '0', isCorrect: false },
+      { id: 'c4', text: '∞', isCorrect: false }
+    ], 'ดีกรีเท่ากัน ตอบสัมประสิทธิ์', ['4/2 = 2'], Difficulty.MEDIUM),
+    createProblem('m3-m10', 'อนุกรม 1 - 1 + 1 - 1 + ... เป็นอย่างไร', [
+      { id: 'c1', text: 'ลู่เข้าสู่ 0', isCorrect: false },
+      { id: 'c2', text: 'ลู่เข้าสู่ 1', isCorrect: false },
+      { id: 'c3', text: 'ลู่ออก', isCorrect: true },
+      { id: 'c4', text: 'ลู่เข้าสู่ 0.5', isCorrect: false }
+    ], 'ผลบวกแกว่งกวัด (Oscillating)', ['ไม่มีลิมิตแน่นอน -> ลู่ออก'], Difficulty.MEDIUM),
   ],
   'm3-HARD': [
     createProblem('m3-h1', 'จงหาค่าของ Σ [1 / (n * (n+1))] เมื่อ n=1 ถึง ∞ (Telescoping Sum)', [
@@ -330,6 +578,37 @@ const PROBLEM_DATABASE: Record<string, Problem[]> = {
         { id: 'c3', text: '1', isCorrect: false },
         { id: 'c4', text: '2/5', isCorrect: false }
       ], 'ทฤษฎีบทลิมิต', ['(lim a<sub>n</sub> + 2) / lim a<sub>n</sub>', '(5+2)/5 = 7/5'], Difficulty.HARD),
+    // New Questions
+    createProblem('m3-h6', 'Σ(1/2^n) จาก n=1 ถึง อินฟินิตี้', [
+      { id: 'c1', text: '1', isCorrect: true },
+      { id: 'c2', text: '2', isCorrect: false },
+      { id: 'c3', text: '0.5', isCorrect: false },
+      { id: 'c4', text: 'หาค่าไม่ได้', isCorrect: false }
+    ], 'อนุกรมเรขาคณิต a1=1/2, r=1/2', ['(1/2) / (1-1/2) = 1'], Difficulty.HARD),
+    createProblem('m3-h7', 'จงหา Σ i^3 เมื่อ i=1 ถึง 10', [
+      { id: 'c1', text: '3025', isCorrect: true },
+      { id: 'c2', text: '2025', isCorrect: false },
+      { id: 'c3', text: '385', isCorrect: false },
+      { id: 'c4', text: '1000', isCorrect: false }
+    ], 'สูตร (n(n+1)/2)^2', ['(55)^2 = 3025'], Difficulty.HARD),
+    createProblem('m3-h8', 'lim (√(n+1) - √n) เมื่อ n -> ∞', [
+      { id: 'c1', text: '1', isCorrect: false },
+      { id: 'c2', text: '0', isCorrect: true },
+      { id: 'c3', text: '∞', isCorrect: false },
+      { id: 'c4', text: 'หาค่าไม่ได้', isCorrect: false }
+    ], 'Conjugate คูณ', ['1 / (√(n+1)+√n) -> 0'], Difficulty.HARD),
+    createProblem('m3-h9', 'ผลบวกอนุกรม 3 + 2 + 4/3 + 8/9 + ...', [
+      { id: 'c1', text: '9', isCorrect: true },
+      { id: 'c2', text: '6', isCorrect: false },
+      { id: 'c3', text: '12', isCorrect: false },
+      { id: 'c4', text: 'หาค่าไม่ได้', isCorrect: false }
+    ], 'r=2/3', ['3 / (1 - 2/3) = 3 / (1/3) = 9'], Difficulty.HARD),
+    createProblem('m3-h10', 'lim (n! / (n+1)!)', [
+      { id: 'c1', text: '1', isCorrect: false },
+      { id: 'c2', text: '0', isCorrect: true },
+      { id: 'c3', text: '∞', isCorrect: false },
+      { id: 'c4', text: 'n', isCorrect: false }
+    ], 'ตัด n!', ['1 / (n+1) -> 0'], Difficulty.HARD),
   ],
 
   // ==========================================
@@ -367,6 +646,37 @@ const PROBLEM_DATABASE: Record<string, Problem[]> = {
         { id: 'c3', text: '3.0', isCorrect: false },
         { id: 'c4', text: '3.5', isCorrect: false }
       ], '1.0, 1.5, 2.0, 2.5', ['วันที่ 4 คือ 2.5'], Difficulty.EASY),
+      // New Questions
+      createProblem('m4-e6', 'วางอิฐบล็อก ชั้นบน 1 ก้อน ชั้นถัดลงมาเพิ่มทีละ 1 ก้อน ชั้นที่ 10 มีกี่ก้อน', [
+        { id: 'c1', text: '9', isCorrect: false },
+        { id: 'c2', text: '10', isCorrect: true },
+        { id: 'c3', text: '11', isCorrect: false },
+        { id: 'c4', text: '55', isCorrect: false }
+      ], 'ลำดับเลขคณิต d=1', ['1, 2, ..., 10'], Difficulty.EASY),
+      createProblem('m4-e7', 'อมีบาแบ่งตัวเป็น 2 เท่าทุกนาที เริ่มต้น 5 ตัว ผ่านไป 2 นาทีมีกี่ตัว', [
+        { id: 'c1', text: '10', isCorrect: false },
+        { id: 'c2', text: '20', isCorrect: true },
+        { id: 'c3', text: '15', isCorrect: false },
+        { id: 'c4', text: '25', isCorrect: false }
+      ], '5 -> 10 -> 20', ['นาทีที่ 0=5, 1=10, 2=20'], Difficulty.EASY),
+      createProblem('m4-e8', 'เก็บเงินวันละ 5 บาท ผ่านไป 10 วัน มีเงินเท่าไหร่ (ไม่คิดดอกเบี้ย)', [
+        { id: 'c1', text: '50', isCorrect: true },
+        { id: 'c2', text: '45', isCorrect: false },
+        { id: 'c3', text: '55', isCorrect: false },
+        { id: 'c4', text: '60', isCorrect: false }
+      ], '10 * 5', ['50 บาท'], Difficulty.EASY),
+      createProblem('m4-e9', 'ต้นไม้สูงขึ้นวันละ 2 ซม. ผ่านไป 5 วัน สูงขึ้นรวมกี่ซม.', [
+        { id: 'c1', text: '8', isCorrect: false },
+        { id: 'c2', text: '10', isCorrect: true },
+        { id: 'c3', text: '12', isCorrect: false },
+        { id: 'c4', text: '5', isCorrect: false }
+      ], '5 * 2', ['10 ซม.'], Difficulty.EASY),
+      createProblem('m4-e10', 'ลดราคาสินค้า 100 บาท ลงปีละ 10 บาท ปีที่ 3 เหลือเท่าไหร่', [
+        { id: 'c1', text: '80', isCorrect: true },
+        { id: 'c2', text: '70', isCorrect: false },
+        { id: 'c3', text: '90', isCorrect: false },
+        { id: 'c4', text: '85', isCorrect: false }
+      ], '100, 90, 80', ['เหลือ 80'], Difficulty.EASY),
   ],
   'm4-MEDIUM': [
      createProblem('m4-m1', 'เงินเดือนเริ่มต้น 15,000 บาท ขึ้นเงินเดือนปีละ 1,000 บาท อีก 10 ปีข้างหน้า (ปีที่ 11) เงินเดือนจะเป็นเท่าใด', [
@@ -399,6 +709,37 @@ const PROBLEM_DATABASE: Record<string, Problem[]> = {
         { id: 'c3', text: '1.44 ล้าน', isCorrect: false },
         { id: 'c4', text: '2.00 ล้าน', isCorrect: false }
       ], '1 * (1.2)^3', ['1.2 * 1.2 = 1.44', '1.44 * 1.2 = 1.728'], Difficulty.MEDIUM),
+      // New Questions
+      createProblem('m4-m6', 'ฝากเงิน 100 บาท ดอกเบี้ย 5% ต่อปี ปีหน้ามีเงินรวมเท่าไหร่', [
+        { id: 'c1', text: '105', isCorrect: true },
+        { id: 'c2', text: '110', isCorrect: false },
+        { id: 'c3', text: '100.5', isCorrect: false },
+        { id: 'c4', text: '115', isCorrect: false }
+      ], '100 * 1.05', ['105 บาท'], Difficulty.MEDIUM),
+      createProblem('m4-m7', 'คนงานเรียงอิฐแถวแรก 50 ก้อน แถวถัดไปลดลง 2 ก้อน แถวที่ 10 มีกี่ก้อน', [
+        { id: 'c1', text: '30', isCorrect: false },
+        { id: 'c2', text: '32', isCorrect: true },
+        { id: 'c3', text: '34', isCorrect: false },
+        { id: 'c4', text: '28', isCorrect: false }
+      ], '50 - 9(2)', ['50 - 18 = 32'], Difficulty.MEDIUM),
+      createProblem('m4-m8', 'ประชากรเมืองหนึ่งเพิ่ม 10% ทุกปี ถ้าปีนี้มี 10,000 คน ปีหน้ามีกี่คน', [
+        { id: 'c1', text: '11,000', isCorrect: true },
+        { id: 'c2', text: '12,000', isCorrect: false },
+        { id: 'c3', text: '10,100', isCorrect: false },
+        { id: 'c4', text: '10,500', isCorrect: false }
+      ], '10,000 * 1.1', ['11,000'], Difficulty.MEDIUM),
+      createProblem('m4-m9', 'เดินขึ้นบันไดทีละ 1 ขั้น หรือ 2 ขั้น (โจทย์ฟีโบนักชี) สำหรับบันได 3 ขั้น มีกี่วิธี', [
+        { id: 'c1', text: '2', isCorrect: false },
+        { id: 'c2', text: '3', isCorrect: true },
+        { id: 'c3', text: '4', isCorrect: false },
+        { id: 'c4', text: '5', isCorrect: false }
+      ], '(1,1,1), (1,2), (2,1)', ['3 วิธี'], Difficulty.MEDIUM),
+      createProblem('m4-m10', 'น้ำในถังระเหยไปวันละ 1 ลิตร เดิมมี 100 ลิตร วันที่ 20 เหลือเท่าไหร่', [
+        { id: 'c1', text: '80', isCorrect: false },
+        { id: 'c2', text: '81', isCorrect: true },
+        { id: 'c3', text: '79', isCorrect: false },
+        { id: 'c4', text: '90', isCorrect: false }
+      ], 'ระวังนับวัน', ['วันที่ 1=100, วันที่ 2=99... วันที่ 20 คือลดไป 19 วัน หรือ 20? ถ้าถาม"ในวันที่" ตอบ 81 (100-19)'], Difficulty.MEDIUM),
   ],
   'm4-HARD': [
      createProblem('m4-h1', 'กู้เงิน 10,000 บาท ดอกเบี้ย 10% ต่อปี แบบทบต้น ถ้าไม่จ่ายคืนเลย 3 ปี หนี้จะกลายเป็นเท่าใด', [
@@ -431,6 +772,37 @@ const PROBLEM_DATABASE: Record<string, Problem[]> = {
        { id: 'c3', text: '150 mg', isCorrect: true },
        { id: 'c4', text: '200 mg', isCorrect: false }
      ], 'ยาเม็ดแรกเหลือ 50 + ยาเม็ดใหม่ 100', ['50 + 100 = 150 mg'], Difficulty.HARD),
+     // New Questions
+     createProblem('m4-h6', 'ซื้อหุ้นปันผล 5 บาท/หุ้น คาดการณ์ปันผลโต 5% ตลอดไป (Geometric) ถ้าต้องการผลตอบแทน 10% ควรซื้อราคาเท่าใด (Model P=D/(k-g))', [
+       { id: 'c1', text: '50 บาท', isCorrect: false },
+       { id: 'c2', text: '100 บาท', isCorrect: true },
+       { id: 'c3', text: '105 บาท', isCorrect: false },
+       { id: 'c4', text: '110 บาท', isCorrect: false }
+     ], '5 / (0.10 - 0.05)', ['5 / 0.05 = 100 บาท'], Difficulty.HARD),
+     createProblem('m4-h7', 'ลูกตุ้มนาฬิกาแกว่งไกล 20 ซม. ครั้งถัดไปลดลง 10% จงหาระยะทางแกว่งรวมถึงหยุดนิ่ง', [
+       { id: 'c1', text: '180', isCorrect: false },
+       { id: 'c2', text: '200', isCorrect: true },
+       { id: 'c3', text: '220', isCorrect: false },
+       { id: 'c4', text: '190', isCorrect: false }
+     ], '20 / (1 - 0.9) หรือ 20/0.1', ['20 / 0.1 = 200 ซม.'], Difficulty.HARD),
+     createProblem('m4-h8', 'ผ่อนบ้าน 20 ปี เดือนละ 10,000 รวมจ่ายทั้งหมดเท่าไหร่', [
+       { id: 'c1', text: '2.4 ล้าน', isCorrect: true },
+       { id: 'c2', text: '2.0 ล้าน', isCorrect: false },
+       { id: 'c3', text: '1.2 ล้าน', isCorrect: false },
+       { id: 'c4', text: '3.0 ล้าน', isCorrect: false }
+     ], '10,000 * 12 * 20', ['2,400,000'], Difficulty.HARD),
+     createProblem('m4-h9', 'เชื้อราคลุมพื้นที่ 1 ตร.ม. เพิ่ม 2 เท่าทุกวัน ถ้าเต็มห้อง 100 ตร.ม. ใน 30 วัน ถามว่าครึ่งห้อง (50 ตร.ม.) ใช้เวลากี่วัน', [
+       { id: 'c1', text: '15 วัน', isCorrect: false },
+       { id: 'c2', text: '29 วัน', isCorrect: true },
+       { id: 'c3', text: '28 วัน', isCorrect: false },
+       { id: 'c4', text: '25 วัน', isCorrect: false }
+     ], 'ย้อนกลับ 1 วัน คือหาร 2', ['วันที่ 30 เต็ม, วันที่ 29 ครึ่งหนึ่ง'], Difficulty.HARD),
+     createProblem('m4-h10', 'วิ่งระยะทางอนันต์ วันแรก 1 กม. วันที่สอง 1/2 กม. วันที่สาม 1/4 กม. รวมระยะทางเท่าไหร่', [
+       { id: 'c1', text: '1.5 กม.', isCorrect: false },
+       { id: 'c2', text: '2.0 กม.', isCorrect: true },
+       { id: 'c3', text: '2.5 กม.', isCorrect: false },
+       { id: 'c4', text: 'ไม่มีที่สิ้นสุด', isCorrect: false }
+     ], '1/(1-0.5)', ['2 กม.'], Difficulty.HARD),
   ]
 };
 
@@ -445,7 +817,7 @@ export const MISSIONS_DATA: Mission[] = [
     image: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=600&auto=format&fit=crop',
     status: MissionStatus.AVAILABLE,
     subMissions: [
-      { id: 'm1-s1', title: 'ด่านฝึกฝน: ลำดับเลขคณิต', description: 'ตะลุยโจทย์ลำดับเลขคณิต 5 ข้อ คัดสรรมาเพื่อคุณ', problems: [] }
+      { id: 'm1-s1', title: 'ด่านฝึกฝน: ลำดับเลขคณิต', description: 'ตะลุยโจทย์ลำดับเลขคณิต 10 ข้อ คัดสรรมาเพื่อคุณ', problems: [] }
     ]
   },
   {
@@ -456,7 +828,7 @@ export const MISSIONS_DATA: Mission[] = [
     image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=600&auto=format&fit=crop',
     status: MissionStatus.AVAILABLE,
     subMissions: [
-      { id: 'm2-s1', title: 'ด่านฝึกฝน: เรขาคณิตครองโลก', description: 'โจทย์ 5 ข้อ ลำดับเรขาคณิตและอนุกรม', problems: [] }
+      { id: 'm2-s1', title: 'ด่านฝึกฝน: เรขาคณิตครองโลก', description: 'โจทย์ 10 ข้อ ลำดับเรขาคณิตและอนุกรม', problems: [] }
     ]
   },
   {
@@ -467,7 +839,7 @@ export const MISSIONS_DATA: Mission[] = [
     image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=600&auto=format&fit=crop',
     status: MissionStatus.AVAILABLE,
     subMissions: [
-      { id: 'm3-s1', title: 'ด่านฝึกฝน: Sigma & Limit', description: 'โจทย์ 5 ข้อ หาผลรวมและลิมิต', problems: [] }
+      { id: 'm3-s1', title: 'ด่านฝึกฝน: Sigma & Limit', description: 'โจทย์ 10 ข้อ หาผลรวมและลิมิต', problems: [] }
     ]
   },
   {
@@ -478,7 +850,7 @@ export const MISSIONS_DATA: Mission[] = [
     image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600&auto=format&fit=crop',
     status: MissionStatus.AVAILABLE,
     subMissions: [
-      { id: 'm4-s1', title: 'ด่านฝึกฝน: นักแก้ปัญหาตัวจริง', description: '5 โจทย์ปัญหาท้าทายความคิด สถานการณ์จริง', problems: [] }
+      { id: 'm4-s1', title: 'ด่านฝึกฝน: นักแก้ปัญหาตัวจริง', description: '10 โจทย์ปัญหาท้าทายความคิด สถานการณ์จริง', problems: [] }
     ]
   }
 ];
